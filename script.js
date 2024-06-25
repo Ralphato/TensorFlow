@@ -664,7 +664,7 @@ async function reavaluate(measurementName) {
       label: car.Label,
     }))
     .filter(car => car.sum != null && car.count != null && car.label != null);
-    let cleanedFiltered = cleaned.filter(car => car.label === 3 || car.label === 4);
+    let cleanedFiltered = cleaned.filter(car => car.label === 3 || car.label === 4); //logic error if we need to test the data that doesnt have any labels, this filter won't work
     return cleanedFiltered;
   }
 
